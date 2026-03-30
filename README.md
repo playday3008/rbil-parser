@@ -2,6 +2,8 @@
 
 Parser for [Ralf Brown's Interrupt List](https://www.cs.cmu.edu/~ralf/files.html) (Release 61) into structured YAML.
 
+Pre-generated output is available at [**rbil-yaml**](https://github.com/playday3008/rbil-yaml).
+
 ## Usage
 
 ```sh
