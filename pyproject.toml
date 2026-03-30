@@ -1,0 +1,30 @@
+[project]
+name = "rbil-parser"
+version = "0.1.0"
+description = "Parser for Ralf Brown's Interrupt List (Release 61) to YAML"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.0",
+    "pyyaml>=6.0",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.0",
+    "pyright>=1.1",
+    "types-pyyaml>=6.0",
+]
+
+[project.scripts]
+parse-rbil = "rbil_parser.output:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.mypy]
+strict = true
+plugins = ["pydantic.mypy"]
+
+[tool.pyright]
+typeCheckingMode = "strict"
